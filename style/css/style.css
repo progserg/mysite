@@ -3,6 +3,10 @@
   src: url('../fonts/montserrat-bold.ttf');
 }
 @font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face {
   font-family: 'Domine';
   src: url('../fonts/Domine-Bold.ttf');
 }
@@ -22,72 +26,51 @@ body {
   background: url("../img/home-background.jpg") no-repeat center;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 700px) {
-  .back {
-    height: 540px;
-    background: url("../img/home-background-md.jpg") no-repeat center;
-  }
-}
 .logo {
   float: left;
 }
 .logo a {
-  margin: 0;
+  margin-top: 0;
 }
 .logo img {
   height: 38px;
   width: 71px;
 }
-@media screen and (min-width: 700px) {
-  .logo img {
-    height: 74px;
-    width: 140px;
-  }
-}
 .navbar {
   margin: 0;
   min-height: 38px;
-  min-width: 30px;
-  background-color: transparent;
-  border: none;
 }
 .navbar-toggle {
   float: left;
   margin: 1px;
-  min-width: 30px;
-  border: none;
-  background-color: transparent;
 }
-.navbar-toggle:hover {
-  border: none;
-  background-color: transparent;
-}
+.navbar,
+.navbar-toggle,
+.navbar-default,
 .navbar-header {
   min-width: 30px;
-}
-.navbar-default {
-  min-width: 30px;
-  border: none;
-  background-color: transparent;
-}
-.navbar-default .navbar-toggle {
-  border: none;
-  background-color: transparent;
-}
-.navbar-default .navbar-toggle:hover {
-  border: none;
-  background-color: transparent;
 }
 .navbar-collapse {
   padding: 0;
 }
-.active,
 .nav,
+.nav > li > a:hover,
+.nav > li > a:focus,
 .navbar,
 .navbar-nav,
 .collapse,
-.navbar-collapse {
+.navbar-collapse,
+.navbar-default,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover,
+.navbar-default.navbar-toggle,
+.navbar-toggle,
+.navbar-toggle:hover {
   border: none;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fa5c65;
 }
 .main-menu {
   padding: 0;
@@ -107,48 +90,15 @@ body {
 .main-menu ul li {
   font: normal 14px 'Montserrat';
   color: #263742;
-  margin: 3px auto;
+  margin: 15px auto;
+  background-color: transparent;
 }
 .main-menu ul li a {
   color: #263742;
   padding: 0;
 }
 .main-menu a {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .main-menu {
-    float: right;
-    height: 74px;
-    width: 470px;
-    padding: 0;
-    padding-top: 24px;
-    margin: 0;
-  }
-  .main-menu .navbar-default {
-    float: left;
-  }
-  .main-menu button {
-    margin: 0;
-  }
-  .main-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  .main-menu ul li {
-    display: inline-block;
-    font: normal 14px 'Montserrat';
-    color: #263742;
-    margin-right: 36px;
-  }
-  .main-menu ul li a {
-    color: #263742;
-  }
-  .main-menu a {
-    margin: 0;
-  }
+  margin-top: 0;
 }
 .box-shadow {
   box-shadow: 1px 1px 5px rgba(38, 55, 66, 0.5);
@@ -158,41 +108,6 @@ body {
 }
 .span-pink {
   color: #fa5c65;
-}
-.header-text h1 {
-  font-size: 4.8vw;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 996px) {
-  .header-text {
-    margin-top: 286px;
-    max-width: 540px;
-  }
-  .header-text h1 {
-    font-size: 48px;
-    text-transform: uppercase;
-  }
-  .header-text p {
-    font: normal 20px "Open Sans";
-    line-height: 40px;
-  }
-  .header-text a {
-    font: bold 15px "Open Sans";
-    line-height: 40px;
-    text-transform: uppercase;
-    margin: 20px auto;
-  }
-  .header-text a.header-btn {
-    width: 170px;
-    height: 63px;
-    background-color: #fa5c65;
-    color: #ffffff;
-  }
-  .header-text a.header-btn:hover {
-    background-color: #fa9b94;
-    text-shadow: 1px 1px 3px rgba(38, 55, 66, 0.7);
-    text-decoration: none;
-  }
 }
 .block {
   margin: 40px auto;
@@ -233,8 +148,8 @@ a:hover {
   text-shadow: 1px 1px 3px rgba(38, 55, 66, 0.7);
 }
 .block-img {
-  max-height: 406px;
-  background: url("../img/mac.png") no-repeat center;
+  height: 406px;
+  background: url("../img/mac.jpg") no-repeat center;
 }
 .team-header h1 {
   color: #314a5b;
@@ -246,6 +161,9 @@ a:hover {
   color: #9aa0ab;
   font: normal 16px "Open Sans";
   line-height: 20px;
+}
+.team {
+  padding: 0;
 }
 .team h1 {
   font-size: 22px;
@@ -273,10 +191,203 @@ a:hover {
   line-height: 50px;
   color: #b9c0c6;
 }
+.header-text {
+  margin-top: 78px;
+}
+.header-text h1 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.header-text p {
+  font: normal 9px "Open Sans";
+  line-height: 10px;
+}
+.header-text a {
+  font: bold 11px "Open Sans";
+  line-height: 15px;
+  text-transform: uppercase;
+  margin: 20px auto;
+}
+.header-text a.header-btn {
+  width: 100px;
+  height: 34px;
+  background-color: #fa5c65;
+  color: #ffffff;
+}
+.header-text a.header-btn:hover {
+  background-color: #fa9b94;
+  text-shadow: 1px 1px 3px rgba(38, 55, 66, 0.7);
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .back {
+    height: 540px;
+    background: url("../img/home-background-md.jpg") no-repeat center;
+  }
+  .block-img {
+    height: 211px;
+    background: url("../img/mac-md.jpg") no-repeat center;
+  }
+  .block {
+    margin: 15px auto;
+    text-transform: uppercase;
+  }
+  .block h1 {
+    font-size: 20px;
+    line-height: 20px;
+    color: #465065;
+  }
+  .block h1.large {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .block p {
+    text-transform: none;
+    color: #9aa0ab;
+    font: normal 12px "Open Sans";
+    line-height: 14px;
+    padding-right: 20px;
+  }
+  .block h3 {
+    text-transform: none;
+    font: normal 14px "Open Sans";
+    line-height: 12px;
+  }
+}
 @media screen and (max-width: 996px) {
   .foto {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .team {
+    padding: 0 15px;
+    min-height: 90px;
+  }
+  .team h1 {
+    font-size: 16px;
+  }
+  .team h3 {
+    font-size: 11px;
+    margin: 5px auto;
+    line-height: 10px;
+  }
+  .team p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media screen and (min-width: 996px) {
+  .header-text {
+    margin-top: 286px;
+    max-width: 540px;
+  }
+  .header-text h1 {
+    font-size: 48px;
+  }
+  .header-text p {
+    font: normal 20px "Open Sans";
+    line-height: 40px;
+  }
+  .header-text a {
+    font: bold 15px "Open Sans";
+    line-height: 40px;
+  }
+  .header-text a.header-btn {
+    width: 170px;
+    height: 63px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .header-text {
+    margin-top: 88px;
+  }
+  .header-text h1 {
+    font-size: 16px;
+  }
+  .header-text p {
+    font: normal 11px "Open Sans";
+    line-height: 13px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .logo img {
+    height: 56px;
+    width: 105px;
+  }
+  .header-text {
+    margin-top: 88px;
+  }
+  .header-text h1 {
+    font-size: 18px;
+  }
+  .header-text p {
+    font: normal 12px "Open Sans";
+    line-height: 13px;
+  }
+  .header-text a {
+    font: bold 15px "Open Sans";
+    line-height: 25px;
+  }
+  .header-text a.header-btn {
+    width: 120px;
+    height: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-menu {
+    float: right;
+    height: 74px;
+    width: 470px;
+    padding: 0;
+    padding-top: 24px;
+    margin: 0;
+  }
+  .main-menu .navbar-default {
+    float: left;
+  }
+  .main-menu button {
+    margin: 0;
+  }
+  .main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .main-menu ul li {
+    display: inline-block;
+    font: normal 14px 'Montserrat';
+    color: #263742;
+    margin: 0;
+    margin-right: 36px;
+  }
+  .main-menu ul li a {
+    color: #263742;
+  }
+  .main-menu a {
+    margin: 0;
+  }
+  .logo img {
+    height: 74px;
+    width: 140px;
+  }
+  .header-text {
+    margin-top: 318px;
+  }
+  .header-text h1 {
+    font-size: 29px;
+  }
+  .header-text p {
+    font: normal 16px "Open Sans";
+    line-height: 40px;
+  }
+  .header-text a {
+    font: bold 15px "Open Sans";
+    line-height: 28px;
+  }
+  .header-text a.header-btn {
+    width: 142px;
+    height: 52px;
   }
 }
 a.soc:hover {
